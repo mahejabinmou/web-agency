@@ -12,6 +12,7 @@ import NewsSection from "./NewsSection/NewsSection";
 import ParallaxSponsors from "./ParallaxSponsors/ParallaxSponsors";
 import ServicesSection from "./ServicesSection/ServicesSection";
 import TeamSection from "./TeamSection/TeamSection";
+import TrustedSection from "./TrustSection/TrustSection";
 import WeDoSection from "./WeDoSection/WeDoSection";
 
 const Home = () => {
@@ -25,7 +26,7 @@ const Home = () => {
       <WeDoSection></WeDoSection>
       <GallerySection></GallerySection>
       <FactsSection></FactsSection>
-      {/* <TrustSection></TrustSection> */}
+      <TrustedSection></TrustedSection>
       <TeamSection></TeamSection>
       <ParallaxSponsors></ParallaxSponsors>
       <AgencySection></AgencySection>

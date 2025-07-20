@@ -37,7 +37,7 @@ const GallerySection = () => {
   const [activeFilter, setActiveFilter] = useState("all");
 
   return (
-    <section className="pt-[100px]">
+    <section className="py-[100px]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row justify-between items-center mb-10">
           <h2 className="text-4xl font-bold mb-6 lg:mb-0">
