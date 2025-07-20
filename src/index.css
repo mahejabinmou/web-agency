@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Lexend";
+    background-color: #ffffff;
+  }
+
+  .headerLogo {
+    @apply h-[22px] 
+    /* ====== */
+    md:h-[22px]
+    /* ==== */
+    lg:h-[24px]
+    /* ==== */
+    xl:h-[30px]
+    2xl:h-[30px];
+  }
+
+  .mobileMenuParent {
+    @apply pt-[25px] text-[14px]   
+    /* ======== */
+    md:pt-[30px] md:text-[16px]
+    /* ======== */
+    lg:pt-[0px] lg:text-[15px] lg:flex lg:list-none lg:text-black lg:gap-x-[5px]
+    /* ======== */
+    xl:pt-[0px] xl:text-[18px] xl:flex xl:list-none xl:text-black xl:gap-x-[20x]
+    2xl:pt-[0px] 2xl:text-[18px] 2xl:flex 2xl:list-none 2xl:text-black 2xl:gap-x-[20px]
+    /* ============ */
+     w-full;
+  }
+
+  .largeScreenMenu {
+    @apply lg:px-[60px] lg:pt-[20px] 
+    /* ========= */ 
+    xl:px-[60px] xl:pt-[25px] 
+    /* ========= */
+    2xl:px-[100px] 2xl:pt-[25px] 
+    /* ========= */
+    flex justify-between items-center;
+  }
+
+  .headerLogo {
+    @apply h-[22px] 
+    /* ====== */
+    md:h-[30px]
+    /* ==== */
+    lg:h-[24px]
+    /* ==== */
+    xl:h-[30px]
+    2xl:h-[30px];
+  }
+
+  .globalBtn {
+    @apply py-[8px] lg:py-[14px] text-black hover:text-white w-[400px]
+    text-[16px] lg:text-[18px] leading-[26px] flex justify-center items-center gap-[10px] 
+      font-medium;
+  }
+
+  .globalBtnDiv {
+    @apply max-w-[130px] lg:max-w-[170px] flex justify-center items-center rounded-[4px] bg-[#FFAA17]
+    hover:bg-black;
+  }
+  .globalHead {
+    @apply text-[30px] lg:text-[36px] font-bold leading-[40px] lg:leading-snug;
+  }
+
+  .navbarLeftRightSpace {
+    @apply px-[28px] py-[12px] 
+    /* -------- */
+    md:py-[25px] md:px-[50px];
+  }
+}
