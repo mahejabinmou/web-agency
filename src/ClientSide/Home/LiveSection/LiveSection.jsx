@@ -10,7 +10,8 @@ const LiveSection = () => {
           </h2>
         </div>
 
-        <div className="relative  overflow-hidden">
+        {/* Image & Squircle Block */}
+        <div className="relative h-[420px] lg:h-[530px] overflow-hidden">
           {/* Background Image */}
           <div
             className="absolute inset-0 bg-cover bg-center grayscale"
@@ -19,34 +20,60 @@ const LiveSection = () => {
             }}
           ></div>
 
-          <div className="relative py-5 z-10 flex justify-center lg:justify-end">
-            <div className="relative w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] rounded-sm lg:rounded-full bg-[#ffae00] p-[20px] lg:p-[50px] lg:pt-[190px]">
+          {/* Yellow Block Container */}
+          <div className="relative z-10 flex items-center justify-center lg:justify-end h-full">
+            <div
+              className="relative w-[340px] h-[360px] lg:size-[490px] lg:-mr-5 bg-[#ffae00]
+                         rounded-[12px] lg:rounded-full
+                         p-[20px] lg:p-[50px]
+                         flex flex-col items-center justify-center text-center"
+            >
               {/* Play Button */}
-              <a
-                href="https://www.youtube.com/watch?v=Get7rqXYrbQ"
-                target="_blank"
-                className="absolute left-[30px] top-[60px] lg:top-[25px] w-[50px] h-[50px] lg:w-[84px] lg:h-[84px] flex items-center justify-center bg-black text-white text-xl rounded-full hover:bg-white hover:text-[#ffae00] transition"
-              >
-                <span className="relative">
-                  <FaPlay />
-                  <span className="absolute inset-[-8px] border border-black/30 rounded-full"></span>
-                </span>
-              </a>
-
-              {/* Title */}
-              <div className="text-black  text-[12px] leading-[20px] lg:text-xl font-bold uppercase lg:leading-tight mb-4">
-                <h3>
-                  agency that gets <br /> excited about
-                </h3>
+              <div className="block lg:hidden">
+                <a
+                  href="https://www.youtube.com/watch?v=Get7rqXYrbQ"
+                  target="_blank"
+                  className="mb-4 size-20
+                           flex items-center justify-center
+                           bg-black text-white text-xl rounded-full
+                           hover:bg-white hover:text-[#ffae00]
+                           transition"
+                >
+                  <span className="relative">
+                    <FaPlay />
+                    <span className="absolute inset-[-8px] border border-black/30 rounded-full"></span>
+                  </span>
+                </a>
               </div>
 
+              {/* Title */}
+              <h3 className="text-black text-[22px] leading-[28px] font-bold uppercase lg:text-4xl lg:leading-tight mb-6 lg:mt-20">
+                agency that gets excited about
+              </h3>
+
               {/* Read More Link */}
-              <div className="text-right  ">
+              <a
+                href="#"
+                className="text-black text-[12px] leading-[20px] lg:text-lg font-medium uppercase
+                           border-b-2 border-black hover:border-black/30 hover:text-black/30 transition lg:ml-[60%] w-max"
+              >
+                Read More
+              </a>
+
+              <div className="hidden lg:block absolute top-[6%] left-[7%]">
                 <a
-                  href="#"
-                  className="text-black text-[12px] leading-[20px] lg:text-lg font-medium uppercase border-b-2 border-black hover:border-black/30 hover:text-black/30 transition"
+                  href="https://www.youtube.com/watch?v=Get7rqXYrbQ"
+                  target="_blank"
+                  className="mb-4 size-24
+                           flex items-center justify-center
+                           bg-black text-white text-xl rounded-full
+                           hover:bg-white hover:text-[#ffae00]
+                           transition"
                 >
-                  Read More
+                  <span className="relative">
+                    <FaPlay />
+                    <span className="absolute inset-[-8px] border border-black/30 rounded-full"></span>
+                  </span>
                 </a>
               </div>
             </div>

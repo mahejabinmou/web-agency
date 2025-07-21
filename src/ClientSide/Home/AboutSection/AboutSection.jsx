@@ -122,8 +122,8 @@ const AboutSection = () => {
             </div>
             <p className="text-[#555] mb-8">
               Lorem Ipsum is simply dummy text of free available in market the
-              printing and typesetting industry has been the industry's standard
-              dummy text ever.
+              printing and typesetting industry has been the industry&apos;s
+              standard dummy text ever.
             </p>
             <div className="flex flex-wrap items-start gap-8">
               <ul className="space-y-3 text-sm text-[#444]">
@@ -161,7 +161,7 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="relative bg-white pt-[100px] hidden:lg block">
+      <div className="relative bg-white pt-[100px] block lg:hidden">
         <div className="absolute left-0 top-0 h-full w-1/2 bg-[#f4f5f8] -ml-[410px] z-0" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 xl:grid-cols-2 gap-12 items-center">
           {/* Image Column */}
@@ -180,8 +180,8 @@ const AboutSection = () => {
             </div>
             <p className="text-[#555] mb-8">
               Lorem Ipsum is simply dummy text of free available in market the
-              printing and typesetting industry has been the industry's standard
-              dummy text ever.
+              printing and typesetting industry has been the industry&apos;s
+              standard dummy text ever.
             </p>
             <div className="flex flex-wrap items-start gap-8">
               <ul className="space-y-3 text-sm text-[#444]">

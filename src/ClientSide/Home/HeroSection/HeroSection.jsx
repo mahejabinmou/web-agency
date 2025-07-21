@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // // import { useEffect, useState } from "react";
 // // import { GoArrowDown, GoArrowUp } from "react-icons/go";
 // // import { MdArrowOutward } from "react-icons/md";
@@ -207,19 +208,25 @@
 // export default HeroSection;
 
 // HeroSection.jsx with animated content on every slide
-import { useRef, useState } from "react";
-import Slider from "react-slick";
-import { GoArrowDown, GoArrowUp } from "react-icons/go";
-import { MdArrowOutward } from "react-icons/md";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
+import {
+  GoArrowDown,
+  GoArrowLeft,
+  GoArrowRight,
+  GoArrowUp,
+} from "react-icons/go";
+import { MdArrowOutward } from "react-icons/md";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
 // Slide Data
 const slides = [
   {
     id: 1,
     bgImage: "/Images/8.jpg",
+    curvedOverlay: "/Images/right-curved-bg.png",
     title: "WELCOME TO LINOOR AGENCY",
     description: "SMART WEB DESIGN AGENCY",
     buttonText: "Discover More",
@@ -227,6 +234,7 @@ const slides = [
   {
     id: 2,
     bgImage: "/Images/9.jpg",
+    curvedOverlay: "/Images/right-curved-bg.png",
     title: "WELCOME TO LINOOR AGENCY",
     description: "SMART WEB DESIGN AGENCY",
     buttonText: "Discover More",
@@ -271,21 +279,24 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative h-[676px] overflow-hidden">
+    <div className="relative h-[65vh] md:h-[100vh] overflow-hidden">
       <Slider ref={sliderRef} {...settings}>
         {slides.map(
-          ({ id, bgImage, title, description, buttonText }, index) => (
+          (
+            { id, bgImage, curvedOverlay, title, description, buttonText },
+            index
+          ) => (
             <div key={id}>
               <div
                 style={{ backgroundImage: `url(${bgImage})` }}
-                className="bg-no-repeat bg-center bg-cover w-full h-[676px] transition-all duration-500 ease-in-out relative"
+                className="bg-no-repeat bg-center bg-cover w-full h-[65vh] md:h-[100vh] mt-16 transition-all duration-500 ease-in-out relative"
               >
                 {/* Content */}
-                <div className="absolute inset-0 flex flex-col justify-center items-start sectionGap md:sectionGap text-left z-10 bg-black/40 px-6 md:px-20">
+                <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start text-center md:text-left z-10 bg-black/40 px-4 sm:px-8 md:px-20">
                   {currentSlide === index && (
                     <>
                       <motion.div
-                        className="text-white pb-[16px] text-[12px] lg:text-[16px] "
+                        className="text-white pb-[16px] text-[12px] lg:text-[16px] lg:mx-64"
                         initial="hidden"
                         animate="visible"
                         variants={animationVariants}
@@ -295,7 +306,7 @@ const HeroSection = () => {
                       </motion.div>
 
                       <motion.div
-                        className="text-white pb-[16px] text-[30px] leading-[40px] lg:text-[100px] lg:leading-[100px] max-w-[1000px] font-bold"
+                        className="text-white pb-[16px] text-[30px] leading-[40px] lg:text-[100px] lg:leading-[100px] max-w-[1000px] font-bold lg:mx-64"
                         initial="hidden"
                         animate="visible"
                         variants={animationVariants}
@@ -305,7 +316,7 @@ const HeroSection = () => {
                       </motion.div>
 
                       <motion.div
-                        className="globalBtnDiv"
+                        className="globalBtnDiv lg:mx-64 mt-10"
                         initial="hidden"
                         animate="visible"
                         variants={animationVariants}
@@ -313,6 +324,24 @@ const HeroSection = () => {
                       >
                         <button className="globalBtn">{buttonText}</button>
                       </motion.div>
+
+                      <motion.div
+                        initial={{ opacity: 0, x: 700 }}
+                        animate={
+                          currentSlide === index ? { opacity: 1, x: 0 } : {}
+                        }
+                        transition={{
+                          duration: 0.8,
+                          delay: 0.5,
+                          ease: "easeInOut",
+                        }}
+                        className="hidden lg:block right-0 top-0 h-full w-[655px] max-w-full absolute z-20 bg-no-repeat bg-right-bottom"
+                        style={{
+                          backgroundImage: `url(${curvedOverlay})`,
+                          backgroundPosition: "right bottom",
+                          backgroundRepeat: "no-repeat",
+                        }}
+                      />
                     </>
                   )}
                 </div>
@@ -335,18 +364,18 @@ const HeroSection = () => {
 
       {/* Custom Arrows */}
       <div className="hidden lg:block">
-        <div className="absolute right-[30px] top-[320px] transform -translate-y-1/2 flex flex-col items-center gap-4 z-50">
+        <div className="absolute right-[16%] top-[55%] transform -translate-y-1/2 flex flex-col items-center gap-3 z-50">
           <button
             onClick={() => handleSlideChange("up")}
-            className="bg-[#5D5F61]  text-black p-3 rounded-full hover:bg-white transition duration-300"
+            className="bg-gray-300 text-black p-3 rounded-full hover:bg-white transition duration-300 opacity-30"
           >
-            <GoArrowUp className="w-6 h-6" />
+            <GoArrowLeft className="size-8 p-1.5" />
           </button>
           <button
             onClick={() => handleSlideChange("down")}
-            className="bg-[#5D5F61]  text-black p-3 rounded-full hover:bg-white transition duration-300"
+            className="bg-gray-300 text-black p-3 rounded-full hover:bg-white transition duration-300 opacity-30"
           >
-            <GoArrowDown className="w-6 h-6" />
+            <GoArrowRight className="size-8 p-1.5" />
           </button>
         </div>
       </div>

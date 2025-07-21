@@ -128,7 +128,7 @@ const stats = [
 import BgImage from "/Images/image-1.jpg";
 export default function FactsSection() {
   return (
-    <section className="relative bg-[#1c1e22] text-white pt-0 pb-[290px] overflow-hidden">
+    <section className="relative bg-[#1c1e22] text-white pt-0 pb-[290px] mb-[15%] lg:mb-16 overflow-hidden">
       <img
         src={BgImage}
         alt=""
