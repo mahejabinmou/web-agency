@@ -7,7 +7,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Lexend";
+    /* font-family: "teko"; */
     background-color: #ffffff;
   }
 
@@ -59,7 +59,7 @@
   .globalBtn {
     @apply py-[8px] lg:py-[14px] text-black hover:text-white w-[400px]
     text-[16px] lg:text-[18px] leading-[26px] flex justify-center items-center gap-[10px] 
-      font-medium;
+     font-rubik font-medium;
   }
 
   .globalBtnDiv {

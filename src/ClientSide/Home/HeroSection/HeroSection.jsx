@@ -296,7 +296,7 @@ const HeroSection = () => {
                   {currentSlide === index && (
                     <>
                       <motion.div
-                        className="text-white pb-[16px] text-[12px] lg:text-[16px] lg:mx-[5%]"
+                        className="text-white pb-[16px] font-rubik text-[12px] lg:text-[16px] lg:mx-[5%]"
                         initial="hidden"
                         animate="visible"
                         variants={animationVariants}
@@ -306,7 +306,7 @@ const HeroSection = () => {
                       </motion.div>
 
                       <motion.div
-                        className="text-white pb-[16px] text-[30px] leading-[40px]  xl:text-[80px] xl:leading-[80px] max-w-[800px] font-bold lg:mx-[5%]"
+                        className="text-white font-teko  pb-[16px] text-[30px] leading-[40px]  xl:text-[80px] xl:leading-[80px] max-w-[500px] font-bold lg:mx-[5%]"
                         initial="hidden"
                         animate="visible"
                         variants={animationVariants}

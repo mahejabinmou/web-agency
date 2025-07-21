@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Barlow: ["Barlow"],
-        Inter: ["Inter"],
+        teko: ["Teko"],
+        rubik: ["Rubik"],
       },
     },
   },

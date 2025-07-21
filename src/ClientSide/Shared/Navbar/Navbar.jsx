@@ -53,7 +53,7 @@ const Navbar = () => {
   }, []);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="">
+    <div className="font-rubik">
       {/* large screen nav */}
       <nav className="hidden lg:block w-full lg:z-50 absolute inset-x-0 bg-transparent ">
         {/* <div className="flex justify-between bg-transparent items-center"> */}
