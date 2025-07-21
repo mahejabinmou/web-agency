@@ -279,7 +279,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative h-[65vh] md:h-[100vh] overflow-hidden">
+    <div className="relative h-[65vh] md:h-[100vh] overflow-hidden bg-transparent">
       <Slider ref={sliderRef} {...settings}>
         {slides.map(
           (
@@ -289,14 +289,14 @@ const HeroSection = () => {
             <div key={id}>
               <div
                 style={{ backgroundImage: `url(${bgImage})` }}
-                className="bg-no-repeat bg-center bg-cover w-full h-[65vh] md:h-[100vh] mt-16 transition-all duration-500 ease-in-out relative"
+                className="bg-no-repeat bg-center bg-cover w-full h-[65vh] md:h-[100vh] pt-16 transition-all duration-500 ease-in-out relative"
               >
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-center items-center md:items-start text-center md:text-left z-10 bg-black/40 px-4 sm:px-8 md:px-20">
                   {currentSlide === index && (
                     <>
                       <motion.div
-                        className="text-white pb-[16px] text-[12px] lg:text-[16px] lg:mx-64"
+                        className="text-white pb-[16px] text-[12px] lg:text-[16px] lg:mx-[5%]"
                         initial="hidden"
                         animate="visible"
                         variants={animationVariants}
@@ -306,7 +306,7 @@ const HeroSection = () => {
                       </motion.div>
 
                       <motion.div
-                        className="text-white pb-[16px] text-[30px] leading-[40px] lg:text-[100px] lg:leading-[100px] max-w-[1000px] font-bold lg:mx-64"
+                        className="text-white pb-[16px] text-[30px] leading-[40px]  xl:text-[80px] xl:leading-[80px] max-w-[800px] font-bold lg:mx-[5%]"
                         initial="hidden"
                         animate="visible"
                         variants={animationVariants}
@@ -316,7 +316,7 @@ const HeroSection = () => {
                       </motion.div>
 
                       <motion.div
-                        className="globalBtnDiv lg:mx-64 mt-10"
+                        className="globalBtnDiv lg:mx-[5%] mt-10"
                         initial="hidden"
                         animate="visible"
                         variants={animationVariants}

@@ -55,9 +55,9 @@ const Navbar = () => {
   return (
     <div className="">
       {/* large screen nav */}
-      <nav className="hidden lg:block w-full lg:z-50 absolute inset-x-0">
+      <nav className="hidden lg:block w-full lg:z-50 absolute inset-x-0 bg-transparent ">
         {/* <div className="flex justify-between bg-transparent items-center"> */}
-        <div className="largeScreenMenu bg-black py-[50px]  flex justify-between place-content-baseline">
+        <div className="largeScreenMenu  py-[50px]  flex justify-between place-content-baseline">
           <div className="headerLogo">
             <Link to="/">
               <img
@@ -191,7 +191,7 @@ const Navbar = () => {
           scrolled ? "hidden" : ""
         }`}
       >
-        <div className="navbarLeftRightSpace flex justify-between items-center   font-normal">
+        <div className="navbarLeftRightSpace bg-transparent flex justify-between items-center   font-normal">
           <ul className="flex justify-between items-center gap-[10px]">
             <div className="headerLogo">
               <Link to="/">
